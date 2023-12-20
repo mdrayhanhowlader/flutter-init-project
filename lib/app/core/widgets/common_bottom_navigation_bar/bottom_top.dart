@@ -28,7 +28,7 @@ class BottomTop extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'ALAMAT :',
+                          'ADDRESS:',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -36,7 +36,7 @@ class BottomTop extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Container(
                             height: 2.0, // Adjust the height of the line
@@ -46,7 +46,7 @@ class BottomTop extends StatelessWidget {
                                 "                    ") // Adjust the margin as needed
                             ),
                         const Text(
-                          'Yayasan Pendidikan Maahad Tahfiz Al Quran ADDIN Perak',
+                          'Maahad Tahfiz Al Quran ADDIN Perak Education Foundation',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -54,7 +54,7 @@ class BottomTop extends StatelessWidget {
                           ),
                         ),
                         const Text(
-                          'Tingkat 1 Kompleks Pendidikan Masjid Al Aulia',
+                          'Level 1 Al Aulia Mosque Education Complex',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -62,7 +62,7 @@ class BottomTop extends StatelessWidget {
                           ),
                         ),
                         const Text(
-                          'Taman Sin Lok, Jalan Kuala Kangsar',
+                          'Sin Lok Park, Jalan Kuala Kangsar',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -86,7 +86,7 @@ class BottomTop extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'HUBUNGI :',
+                          'CONTACT:',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
@@ -94,7 +94,7 @@ class BottomTop extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Container(
                             height: 2.0, // Adjust the height of the line
@@ -104,7 +104,7 @@ class BottomTop extends StatelessWidget {
                                 "                    ") // Adjust the margin as needed
                             ),
                         const Text(
-                          'Telefon: 05 5060223',
+                          'Phone: 05 5060223',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 14,
@@ -128,7 +128,7 @@ class BottomTop extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'PENGUNJUNG :',
+                          'VISITORS',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 22,
@@ -136,7 +136,7 @@ class BottomTop extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Container(
                             height: 2.0, // Adjust the height of the line
@@ -148,7 +148,7 @@ class BottomTop extends StatelessWidget {
                         const Row(
                           children: [
                             Text(
-                              'Jumlah :',
+                              'Total: ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
@@ -156,7 +156,7 @@ class BottomTop extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '1615174',
+                              '1615523',
                               style: TextStyle(
                                 color: Colors.red,
                                 fontSize: 14,
@@ -168,7 +168,7 @@ class BottomTop extends StatelessWidget {
                         const Row(
                           children: [
                             Text(
-                              'Hari Ini :',
+                              'Today: ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
@@ -176,7 +176,7 @@ class BottomTop extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '25',
+                              '43',
                               style: TextStyle(
                                 color: Colors.red,
                                 fontSize: 14,
@@ -188,7 +188,7 @@ class BottomTop extends StatelessWidget {
                         const Row(
                           children: [
                             Text(
-                              'Kelmarin :',
+                              'Yesterday: ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
@@ -196,7 +196,7 @@ class BottomTop extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '104',
+                              '60',
                               style: TextStyle(
                                 color: Colors.red,
                                 fontSize: 14,
@@ -208,7 +208,7 @@ class BottomTop extends StatelessWidget {
                         const Row(
                           children: [
                             Text(
-                              'Bulan Ini :',
+                              'This Month: ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
@@ -216,7 +216,7 @@ class BottomTop extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '1123',
+                              '1473',
                               style: TextStyle(
                                 color: Colors.red,
                                 fontSize: 14,
@@ -228,7 +228,7 @@ class BottomTop extends StatelessWidget {
                         const Row(
                           children: [
                             Text(
-                              'Bulan Lepas :',
+                              'Last Month: ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,

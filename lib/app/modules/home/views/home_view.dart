@@ -1,10 +1,12 @@
 import 'package:cms/app/core/widgets/common_bottom_navigation_bar/bottom_navigation.dart';
 import 'package:cms/app/core/widgets/custom_banner/custom_banner.dart';
 import 'package:cms/app/core/widgets/custom_slider/custom_image_slider.dart';
-import 'package:cms/app/core/widgets/hightlight/custom_highlight.dart';
+import 'package:cms/app/modules/home/views/widgets_home/hightlight/custom_highlight.dart';
 import 'package:cms/app/core/widgets/layouts/top/top.dart';
-import 'package:cms/app/core/widgets/news/home_news.dart';
-import 'package:cms/app/core/widgets/stories/stories.dart';
+import 'package:cms/app/data/constants/extensions/widget_extensions.dart';
+import 'package:cms/app/modules/home/views/widgets_home/news/home_news.dart';
+import 'package:cms/app/modules/home/views/widgets_home/stories/stories.dart';
+import 'package:cms/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -33,7 +35,10 @@ class HomeView extends GetView<HomeController> {
               height: 50,
             ),
 
-            const HomeNews(), // News or Post Part
+            HomeNews().onTap(() {
+              Get.toNamed(Routes.FAQ);
+            }), // News or Post Part
+
             const SizedBox(
               height: 100,
             ),

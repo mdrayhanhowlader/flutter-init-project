@@ -10,6 +10,7 @@ class BottomBottom extends StatelessWidget {
         children: [
           Image.asset(
             'assets/images/cmslogo.png',
+            
           ),
           const SizedBox(
             height: 20,
