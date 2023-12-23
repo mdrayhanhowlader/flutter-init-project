@@ -14,13 +14,15 @@ class APIService extends getx.GetxService {
 
   static final String liveUrl = 'https://api01.hudhud.my/api/v3/';
 
-  static final String devUrl = 'https://devapi01.awfatech.com/api/v1/';
+  static final String devUrl =
+      'mobigate.awfatech.com/app_asisv3/list_schselect.php';
 
   static final String url = devUrl;
 
   APIService() {
-    BaseOptions options =
-        BaseOptions(receiveTimeout: Duration(milliseconds: 20000), connectTimeout: Duration(milliseconds: 20000));
+    BaseOptions options = BaseOptions(
+        receiveTimeout: const Duration(milliseconds: 20000),
+        connectTimeout: const Duration(milliseconds: 20000));
     _dio = Dio(options);
 
     _dioCacheOption = CacheOptions(
@@ -44,13 +46,14 @@ class APIService extends getx.GetxService {
   Future<dynamic> get({String? endpoint, String? fullUrl}) async {
     Response response;
     try {
-      response =
-          await _dio.get((fullUrl == null) ? (url + (endpoint ?? "")) : fullUrl,
-              options: Options(
-                headers: {
-                  "authorization": "Bearer " + serviceLocalDb.getToken(),
-                },
-              ));
+      response = await _dio.get(
+        (fullUrl == null) ? (url + (endpoint ?? "")) : fullUrl,
+        // options: Options(
+        //   headers: {
+        //     // "authorization": "Bearer " + serviceLocalDb.getToken(),
+        //   },
+        // ),
+      );
       return response;
     } on DioError catch (error) {
       String er = _handleError(error);
@@ -67,13 +70,15 @@ class APIService extends getx.GetxService {
     //   body.putIfAbsent('ic', () => serviceLocalDb.getLoginData()!.data!.userId.toString());
     // }
     try {
-      Response response = await _dio.post(url + endpoint,
-          data: body,
-          options: Options(
-            headers: {
-              "authorization": "Bearer " + serviceLocalDb.getToken(),
-            },
-          ));
+      Response response = await _dio.post(
+        url + endpoint,
+        data: body,
+        // options: Options(
+        //   headers: {
+        //     // "authorization": "Bearer " + serviceLocalDb.getToken(),
+        //   },
+        // ),
+      );
       return response;
     } on DioError catch (error) {
       if (error is DioError) {

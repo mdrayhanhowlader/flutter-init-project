@@ -87,4 +87,7 @@ class EndpointConstant {
 
   // STAFF INFORMATION
   static final staffInfo = "Eboss/Hr/Staff/DetailStaff?idserver=";
+
+  // ====================== CMS ========================
+  static final navigation = "getNavheader.php/data";
 }

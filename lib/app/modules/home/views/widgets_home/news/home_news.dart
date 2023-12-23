@@ -14,10 +14,17 @@ class HomeNews extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-           Expanded(
-                // card area
-                flex: 7,
-                child: HomeNewsCard()),
+            Expanded(
+              flex: 7,
+              child: Column(
+                children: [
+                  HomeNewsCard(),
+                  HomeNewsCard(),
+                  HomeNewsCard(),
+                  HomeNewsCard(),
+                ],
+              ),
+            ),
             Expanded(
               flex: 3,
               child: HomeNewsAd(),
@@ -28,5 +35,3 @@ class HomeNews extends StatelessWidget {
     );
   }
 }
-
-

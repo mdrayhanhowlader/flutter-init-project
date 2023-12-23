@@ -6,6 +6,11 @@ abstract class Routes {
   static const HOME = _Paths.HOME;
   static const FAQ = _Paths.FAQ;
   static const API_HANDLING = _Paths.API_HANDLING;
+  static const NEWS_DETAILS_PAGE = _Paths.NEWS_DETAILS_PAGE;
+  static const INFO_ADDIN = _Paths.INFO_ADDIN;
+  static const BRANCH = _Paths.BRANCH;
+  static const ADDIN_STORE = _Paths.ADDIN_STORE;
+  static const NEW_APPLICATION = _Paths.NEW_APPLICATION;
 }
 
 abstract class _Paths {
@@ -13,4 +18,9 @@ abstract class _Paths {
   static const HOME = '/home';
   static const FAQ = '/faq';
   static const API_HANDLING = '/api-handling';
+  static const NEWS_DETAILS_PAGE = '/news-details-page';
+  static const INFO_ADDIN = '/info-addin';
+  static const BRANCH = '/branch';
+  static const ADDIN_STORE = '/addin-store';
+  static const NEW_APPLICATION = '/new-application';
 }

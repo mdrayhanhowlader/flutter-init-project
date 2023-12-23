@@ -13,7 +13,7 @@ import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,7 @@ class HomeView extends GetView<HomeController> {
               height: 50,
             ),
 
-            HomeNews().onTap(() {
-              Get.toNamed(Routes.FAQ);
-            }), // News or Post Part
+            const HomeNews(), // News or Post Part
 
             const SizedBox(
               height: 100,

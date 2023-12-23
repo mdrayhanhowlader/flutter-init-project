@@ -1,15 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomNavigationTop extends StatefulWidget {
-  const CustomNavigationTop({Key? key}) : super(key: key);
+  const CustomNavigationTop({super.key});
 
   @override
-  State<CustomNavigationTop> createState() => _CustomNavigationTopState();
+  // ignore: library_private_types_in_public_api
+  _CustomNavigationTopState createState() => _CustomNavigationTopState();
 }
 
 class _CustomNavigationTopState extends State<CustomNavigationTop> {
+  String currentButton = '';
+  bool isHovering = false;
 
+  void _handleHover(String buttonText) {
+    setState(() {
+      currentButton = buttonText;
+      isHovering = true;
+    });
+  }
 
+  void _handleHoverExit() {
+    setState(() {
+      isHovering = false;
+    });
+  }
+
+  void _handleMenuClick(String route) {
+    Get.toNamed(route);
+    setState(() {
+      isHovering = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,27 +40,40 @@ class _CustomNavigationTopState extends State<CustomNavigationTop> {
       width: MediaQuery.of(context).size.width,
       decoration: const BoxDecoration(color: Colors.black),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
-        child: Container(
-          width: MediaQuery.of(context).size.width * 0.6,
-  
-          child:const Row(
+        padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+        child: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.8,
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            
             children: [
-              Text('MAIN', style: TextStyle(color: Colors.white),),
-              SizedBox(width: 30),
-              Text('ADDIN INFO', style: TextStyle(color: Colors.white),),
-              SizedBox(width: 30),
-              Text('BRANCH', style: TextStyle(color: Colors.white),),
-              SizedBox(width: 30),
-              Text('E-ALUMNI', style: TextStyle(color: Colors.white),),
-              SizedBox(width: 30),
-              Text('LINK', style: TextStyle(color: Colors.white),),
-              SizedBox(width: 30),
-              Text('E-CAREER', style: TextStyle(color: Colors.white),),
-              SizedBox(width: 30),
-              Text('ADDIN HOMESTAY', style: TextStyle(color: Colors.white),),
+              _buildButton('MAIN', '/home'),
+              const SizedBox(
+                width: 20,
+              ),
+              _buildButton('ADDIN INFO', '/addin-info'),
+              const SizedBox(
+                width: 20,
+              ),
+              _buildButton('BRANCH', '/branch'),
+              const SizedBox(
+                width: 20,
+              ),
+              _buildButton('E-ALUMNI', '/e-alumni'),
+              const SizedBox(
+                width: 20,
+              ),
+              _buildButton('LINK', '/link'),
+              const SizedBox(
+                width: 20,
+              ),
+              _buildButton('E-CAREER', '/e-career'),
+              const SizedBox(
+                width: 20,
+              ),
+              _buildButton('ADDIN HOMESTAY', '/addin-homestay'),
+              const SizedBox(
+                width: 20,
+              ),
             ],
           ),
         ),
@@ -46,10 +81,31 @@ class _CustomNavigationTopState extends State<CustomNavigationTop> {
     );
   }
 
+  Widget _buildButton(String buttonText, String route) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          currentButton = buttonText;
+          isHovering = !isHovering;
+        });
+      },
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        onEnter: (_) {
+          _handleHover(buttonText);
+        },
+        onExit: (_) {
+          _handleHoverExit();
+        },
+        child: Text(
+          buttonText,
+          style: TextStyle(
+            color: currentButton == buttonText
+                ? Colors.green // Change color when button is hovered
+                : Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
 }
-
-
-
-
-
-

@@ -1,28 +1,27 @@
 import 'package:cms/app/data/constants/extensions/widget_extensions.dart';
+import 'package:cms/app/modules/newsDetailsPage/views/news_details_page_view.dart';
+import 'package:cms/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+// Replace with your file path
 
 class HomeNewsCard extends StatelessWidget {
   const HomeNewsCard({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 200,
       child: Row(
         // crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
               flex: 4,
-              child: Container(
+              child: SizedBox(
                 height: double.infinity,
-                child: MouseRegion(
-                  child: Image.asset(
-                    "assets/images/cmsteacher.jpg",
-                    fit: BoxFit.cover,
-                  ),
-                  onEnter: (_) {
-                    opacity(opacity: 0.1);
-                  },
+                child: Image.asset(
+                  "assets/images/cmsteacher.jpg",
+                  fit: BoxFit.cover,
                 ),
               )),
           Expanded(
@@ -54,18 +53,22 @@ class HomeNewsCard extends StatelessWidget {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Lagi",
+                        onPressed: () {
+                          Get.to(() => const NewsDetailsPageView());
+                        },
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
+                            minimumSize: const Size(15, 20),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(0))),
+                        child: const Text(
+                          "Again",
                           style: TextStyle(
                               fontWeight: FontWeight.w500, color: Colors.white),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green,
-                            minimumSize: Size(30, 30),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(0))),
-                      ),
+                      ).onTap(() {
+                        Get.toNamed(Routes.NEWS_DETAILS_PAGE);
+                      }),
                     )
                   ],
                 ),

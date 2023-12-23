@@ -1,30 +1,36 @@
+import 'package:cms/app/data/constants/color_constant.dart';
+import 'package:cms/app/modules/home/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class CustomLogoBar extends StatefulWidget {
+class CustomLogoBar extends GetView<HomeController> {
   const CustomLogoBar({super.key});
 
-  @override
-  State<CustomLogoBar> createState() => _CustomLogoBarState();
-}
-
-class _CustomLogoBarState extends State<CustomLogoBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 80,
-      decoration: BoxDecoration(color: Colors.black),
+      decoration: const BoxDecoration(color: Colors.black),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 100, vertical: 1),
+        padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 1),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Image.asset('assets/images/cmslogo.png'),
+            GestureDetector(
+              onTap: () {
+                Get.toNamed('/home');
+              },
+              child: MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: Image.asset('assets/images/cmslogo.png'),
+              ),
+            ),
             const SizedBox(
               width: 150,
             ),
             Icon(
               Icons.share_outlined,
-              color: Colors.white,
+              color: ColorConstant.appColorPrimaryLight,
             ),
           ],
         ),

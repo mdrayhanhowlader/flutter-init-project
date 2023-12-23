@@ -1,21 +1,16 @@
-import 'package:flutter/foundation.dart';
+import 'package:cms/app/modules/home/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:cms/app/modules/home/views/widgets_home/custom_navigation/custom_navigation_bottom.dart';
-import 'package:cms/app/modules/home/views/widgets_home/custom_navigation/custom_navigation_top.dart';
-import 'package:cms/app/modules/home/views/widgets_home/custom_navigation/castom_logo_bar.dart';
+import 'package:get/get.dart';
+import '../../../../modules/home/views/widgets_home/custom_navigation/castom_logo_bar.dart';
+import '../../../../modules/home/views/widgets_home/custom_navigation/custom_navigation_bottom.dart';
+import '../../../../modules/home/views/widgets_home/custom_navigation/custom_navigation_top.dart';
 
-class LayoutTop extends StatefulWidget {
+class LayoutTop extends GetView<HomeController> {
   const LayoutTop({super.key});
 
   @override
-  State<LayoutTop> createState() => _LayoutTopState();
-}
-
-class _LayoutTopState extends State<LayoutTop> {
-  @override
-  @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         CustomNavigationTop(),
         CustomLogoBar(),
