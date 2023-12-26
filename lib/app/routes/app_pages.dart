@@ -6,6 +6,8 @@ import '../modules/api_handling/bindings/api_handling_binding.dart';
 import '../modules/api_handling/views/api_handling_view.dart';
 import '../modules/branch/bindings/branch_binding.dart';
 import '../modules/branch/views/branch_view.dart';
+import '../modules/e-infaq/bindings/e_infaq_binding.dart';
+import '../modules/e-infaq/views/e_infaq_view.dart';
 import '../modules/faq/bindings/faq_binding.dart';
 import '../modules/faq/views/faq_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -16,6 +18,8 @@ import '../modules/new_application/bindings/new_application_binding.dart';
 import '../modules/new_application/views/new_application_view.dart';
 import '../modules/newsDetailsPage/bindings/news_details_page_binding.dart';
 import '../modules/newsDetailsPage/views/news_details_page_view.dart';
+import '../modules/user/bindings/user_binding.dart';
+import '../modules/user/views/user_view.dart';
 
 part 'app_routes.dart';
 
@@ -64,6 +68,16 @@ class AppPages {
       name: _Paths.NEW_APPLICATION,
       page: () => const NewApplicationView(),
       binding: NewApplicationBinding(),
+    ),
+    GetPage(
+      name: _Paths.E_INFAQ,
+      page: () => const EInfaqView(),
+      binding: EInfaqBinding(),
+    ),
+    GetPage(
+      name: _Paths.USER,
+      page: () => const UserView(),
+      binding: UserBinding(),
     ),
   ];
 }

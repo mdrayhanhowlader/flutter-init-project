@@ -2,6 +2,7 @@ import 'package:cms/app/data/constants/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:share_plus/share_plus.dart';
 
 class SubHeader extends StatelessWidget {
   const SubHeader({super.key});
@@ -51,7 +52,10 @@ class SubHeader extends StatelessWidget {
                   width: 10,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    const test = "hello world";
+                    await Share.share(test);
+                  },
                   icon: const Icon(Icons.facebook_outlined),
                   color: Colors.blue.shade600,
                 ),
@@ -59,9 +63,12 @@ class SubHeader extends StatelessWidget {
                   width: 5,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    const test = "hello world";
+                    await Share.share(test);
+                  },
                   icon: const FaIcon(FontAwesomeIcons.whatsapp),
-                  color: Colors.green.shade400,
+                  color: Colors.green.shade600,
                 ),
               ],
             ),

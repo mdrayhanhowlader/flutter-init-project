@@ -2,10 +2,7 @@ import 'package:cms/app/core/widgets/common_bottom_navigation_bar/bottom_navigat
 import 'package:cms/app/core/widgets/layouts/top/top.dart';
 import 'package:cms/app/core/widgets/sub_header/sub_header.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
-
 import '../controllers/faq_controller.dart';
 
 class FaqView extends GetView<FaqController> {

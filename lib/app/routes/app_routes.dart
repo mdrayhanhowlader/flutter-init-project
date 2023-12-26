@@ -11,6 +11,8 @@ abstract class Routes {
   static const BRANCH = _Paths.BRANCH;
   static const ADDIN_STORE = _Paths.ADDIN_STORE;
   static const NEW_APPLICATION = _Paths.NEW_APPLICATION;
+  static const E_INFAQ = _Paths.E_INFAQ;
+  static const USER = _Paths.USER;
 }
 
 abstract class _Paths {
@@ -23,4 +25,6 @@ abstract class _Paths {
   static const BRANCH = '/branch';
   static const ADDIN_STORE = '/addin-store';
   static const NEW_APPLICATION = '/new-application';
+  static const E_INFAQ = '/e-infaq';
+  static const USER = '/user';
 }
