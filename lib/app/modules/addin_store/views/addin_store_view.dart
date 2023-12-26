@@ -19,13 +19,16 @@ class AddinStoreView extends GetView<AddinStoreController> {
 
             const SubHeader(), // sub header
             const SizedBox(
-              height: 100,
+              height: 20,
             ),
             Container(
-              width: Get.width * 0.8,
-              height: Get.height,
+              width: Get.width,
               alignment: Alignment.center,
-              child: Image.asset('assets/images/cms_store_img.jpg'),
+              child: Image.asset(
+                'assets/images/cms_store_img.jpg',
+                fit: BoxFit.fill,
+                width: double.infinity,
+              ),
             ),
             Container(
               color: Colors.black,
