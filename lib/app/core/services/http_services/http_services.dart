@@ -12,8 +12,8 @@ class APIService extends getx.GetxService {
 
   final serviceLocalDb = getx.Get.find<LocalDBService>();
 
-  static final String liveUrl = 'https://devapi01.awfatech.com';
-  static final String devUrl = 'https://devapi01.awfatech.com';
+  static final String liveUrl = 'https://demo.awfatech.com/main/app/cmsapi/';
+  static final String devUrl = 'https://demo.awfatech.com/main/app/cmsapi/';
 
   // static final String liveUrl = 'https://demo.awfatech.com/main/app/cmsapi';
   // static final String devUrl = 'https://demo.awfatech.com/main/app/cmsapi';

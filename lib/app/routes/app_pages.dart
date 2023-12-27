@@ -20,6 +20,8 @@ import '../modules/newsDetailsPage/bindings/news_details_page_binding.dart';
 import '../modules/newsDetailsPage/views/news_details_page_view.dart';
 import '../modules/user/bindings/user_binding.dart';
 import '../modules/user/views/user_view.dart';
+import '../modules/web_nav/bindings/web_nav_binding.dart';
+import '../modules/web_nav/views/web_nav_view.dart';
 
 part 'app_routes.dart';
 
@@ -78,6 +80,11 @@ class AppPages {
       name: _Paths.USER,
       page: () => const UserView(),
       binding: UserBinding(),
+    ),
+    GetPage(
+      name: _Paths.WEB_NAV,
+      page: () => const WebNavView(),
+      binding: WebNavBinding(),
     ),
   ];
 }

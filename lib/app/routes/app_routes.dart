@@ -13,6 +13,8 @@ abstract class Routes {
   static const NEW_APPLICATION = _Paths.NEW_APPLICATION;
   static const E_INFAQ = _Paths.E_INFAQ;
   static const USER = _Paths.USER;
+  static const REST_API = _Paths.REST_API;
+  static const WEB_NAV = _Paths.WEB_NAV;
 }
 
 abstract class _Paths {
@@ -27,4 +29,6 @@ abstract class _Paths {
   static const NEW_APPLICATION = '/new-application';
   static const E_INFAQ = '/e-infaq';
   static const USER = '/user';
+  static const REST_API = '/rest-api';
+  static const WEB_NAV = '/web-nav';
 }
